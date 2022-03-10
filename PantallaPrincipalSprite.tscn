@@ -5,8 +5,13 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 500, 300 )
+[node name="Original" type="Sprite" parent="."]
+position = Vector2( 533, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+
+[node name="Segon" type="Sprite" parent="Original"]
+modulate = Color( 0.866667, 0.12549, 0.12549, 1 )
+position = Vector2( -87.5, -0.5 )
+texture = ExtResource( 1 )
