@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="P"
-run/main_scene="res://PantallaPrincipalSprite.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Escenes/PantallaPrincipalSprite.tscn"
+config/icon="res://Imatges/icon.png"
 
 [input]
 
@@ -44,7 +44,3 @@ Abaix={
 [physics]
 
 common/enable_pause_aware_picking=true
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"

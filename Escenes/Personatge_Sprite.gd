@@ -39,3 +39,14 @@ func _process(delta):
 	#if position.y >= 600 or position.y <= 0:
 		#velocitat.y = -velocitat.y
 		
+func _on_Area2D_area_entered(area):
+	if area.name == "Zona":
+		modulate = Color(1,0,0)
+	elif area.name == "Zona2":
+		modulate = Color(1,0,1)
+	area.modulate = Color(0,1,0)
+	#print('YAUUUU')
+	
+func _on_Personatge_area_exited(area):
+	modulate = Color(1,1,1)
+	area.modulate = Color(1,1,1)
