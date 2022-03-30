@@ -7,14 +7,14 @@
 [ext_resource path="res://Imatges/Blue/alienBlue_stand.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 62.25, 65.75 )
+extents = Vector2( 24.5, 35 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "corre",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
@@ -28,15 +28,16 @@ animations = [ {
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+modulate = Color( 1, 0, 0.984314, 1 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1 )
+position = Vector2( -0.5, 10 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1.90735e-06, -47.5 )
-scale = Vector2( 1, 0.878906 )
+position = Vector2( -1, -13 )
+scale = Vector2( 0.431641, 0.457031 )
 frames = SubResource( 2 )
-animation = "quiet"
+animation = "jump"
 playing = true

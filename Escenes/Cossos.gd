@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-var velocitat_base = 200
+var velocitat_base = 300
 var velocitat = Vector2.ZERO
 var direccio = Vector2.DOWN
 var gravetat = Vector2.DOWN * 980
-var velocitat_salt = -300
+var velocitat_salt = -500
 
 func _physics_process(delta):
 	velocitat += gravetat * delta
@@ -17,3 +17,22 @@ func _physics_process(delta):
 		velocitat.y = velocitat_salt
 		
 	velocitat = move_and_slide(velocitat, Vector2.UP)
+	anima(velocitat)
+
+func anima(velocitat):
+	if velocitat.x > 0:
+		$AnimatedSprite.play("corre")
+		$AnimatedSprite.flip_h = false
+	elif velocitat.x < 0:
+		$AnimatedSprite.play("corre")
+		$AnimatedSprite.flip_h = true
+
+	if abs(velocitat.x) < 0.1:
+		$AnimatedSprite.play("quiet")
+
+	if velocitat.y < 0:
+		$AnimatedSprite.play("jump")
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://Escenes/NodeTerra.tscn")

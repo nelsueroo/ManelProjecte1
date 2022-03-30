@@ -1,12 +1,49 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenes/KinPersonatgeJoc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/TerraStaticBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenes/ObstacleParet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenes/MiniTerra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenes/PortalArea2D.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 537 )
+[node name="Terra Vemell" parent="." instance=ExtResource( 2 )]
+position = Vector2( 95, 489 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( -3, -3 )
+[node name="Paret Gran" parent="." instance=ExtResource( 3 )]
+position = Vector2( 796, 223 )
+
+[node name="Paret Gran 2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 640, 149 )
+
+[node name="Terra Petit" parent="." instance=ExtResource( 4 )]
+position = Vector2( 638, 412 )
+
+[node name="Terra Petit5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 794, -56 )
+
+[node name="Terra Petit4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 733, 69 )
+
+[node name="Terra Petit3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 638, 186 )
+
+[node name="Terra Petit2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 735, 301 )
+
+[node name="Terra Vermell 2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 638, 555 )
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -581, 664 )
+
+[node name="KinematicJugador" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.121569, 0.639216, 0.117647, 1 )
+position = Vector2( -34, 400 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicJugador"]
+position = Vector2( 21, 7 )
+current = true
+
+[connection signal="body_entered" from="Area2D" to="KinematicJugador" method="_on_Area2D_body_entered"]
