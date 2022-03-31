@@ -10,7 +10,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="BackgroundColorGrass" type="Sprite" parent="."]
-position = Vector2( 477, 300 )
+position = Vector2( 488, 347 )
 scale = Vector2( 2.71777, 1.60156 )
 texture = ExtResource( 6 )
 

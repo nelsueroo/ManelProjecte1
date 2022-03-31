@@ -6,7 +6,6 @@ extents = Vector2( 1004.75, 20 )
 [node name="Area2D" type="Area2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 margin_left = -37.0
 margin_top = 60.0
 margin_right = 1959.0
