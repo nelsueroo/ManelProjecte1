@@ -36,3 +36,15 @@ func anima(velocitat):
 
 func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://Escenes/NodeTerra.tscn")
+
+
+func _on_Punxa_body_entered(body):
+	get_tree().change_scene("res://Escenes/NodeTerra.tscn")
+
+
+func _on_SpikeMuerte_body_entered(body):
+	get_tree().change_scene("res://Escenes/NodeTerra.tscn")
+
+
+func _on_PortalPantalla_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla2.tscn")

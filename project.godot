@@ -12,7 +12,6 @@ config_version=4
 
 config/name="P"
 run/main_scene="res://Escenes/NodeTerra.tscn"
-config/icon="res://Imatges/icon.png"
 
 [input]
 

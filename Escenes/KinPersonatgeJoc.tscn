@@ -8,7 +8,7 @@
 [ext_resource path="res://Imatges/Poses HD/character_maleAdventurer_run2.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.5, 36 )
+extents = Vector2( 25, 36.5 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -32,11 +32,11 @@ animations = [ {
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.5, 16 )
+position = Vector2( 1, 16.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -0.218767, 3.74999 )
+position = Vector2( -0.218777, 3.74999 )
 scale = Vector2( 0.439779, 0.388672 )
 frames = SubResource( 2 )
 animation = "quiet"

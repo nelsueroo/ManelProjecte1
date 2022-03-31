@@ -1,54 +1,122 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Escenes/KinPersonatgeJoc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/TerraStaticBody2D.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Escenes/ObstacleParet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Escenes/MiniTerra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenes/PortalPantalla.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Imatges/Tiles/tile_0161.png" type="Texture" id=4]
 [ext_resource path="res://Escenes/PortalArea2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Imatges/Backgrounds/backgroundColorGrass.png" type="Texture" id=6]
+[ext_resource path="res://Imatges/Objectes/Environment/grass1.png" type="Texture" id=7]
+[ext_resource path="res://Escenes/Area2DPunxa.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenes/TerraGespaPetit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Imatges/Objectes/Enemies/sun2.png" type="Texture" id=10]
+[ext_resource path="res://Escenes/TerraGespaGran.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Escenes/SpikeMuerte.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Escenes/PedraParet.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Escenes/PedraParet2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Escenes/PedraTerraPetit.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="BackgroundColorGrass" type="Sprite" parent="."]
-position = Vector2( 488, 347 )
-scale = Vector2( 2.71777, 1.60156 )
+[node name="PrimeraPantalla" type="Sprite" parent="."]
+position = Vector2( 737, 263 )
+scale = Vector2( 3.5459, 1.87549 )
 texture = ExtResource( 6 )
 
-[node name="KinematicJugador" parent="." instance=ExtResource( 1 )]
-position = Vector2( -34, 400 )
+[node name="SpikeMuerte" parent="PrimeraPantalla" instance=ExtResource( 12 )]
+modulate = Color( 0.380392, 0.329412, 0.329412, 1 )
+position = Vector2( -38.9182, -110.905 )
+scale = Vector2( 0.282016, 0.533195 )
 
-[node name="Camera2D" type="Camera2D" parent="KinematicJugador"]
-position = Vector2( 21, 7 )
+[node name="SpikeMuerte2" parent="PrimeraPantalla/SpikeMuerte" instance=ExtResource( 12 )]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+position = Vector2( -216, 0 )
+
+[node name="SpikeMuerte3" parent="PrimeraPantalla/SpikeMuerte" instance=ExtResource( 12 )]
+position = Vector2( -444, 0 )
+
+[node name="DecoracioGespa" type="Sprite" parent="PrimeraPantalla"]
+position = Vector2( -60.6335, 118.369 )
+scale = Vector2( 0.282016, 0.533195 )
+texture = ExtResource( 7 )
+
+[node name="Sun2" type="Sprite" parent="PrimeraPantalla/DecoracioGespa"]
+position = Vector2( 598, -595 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 10 )
+
+[node name="TerraGespaPetit" parent="PrimeraPantalla" instance=ExtResource( 9 )]
+position = Vector2( 57.5313, 62.917 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="TerraGespaPetit2" parent="PrimeraPantalla/TerraGespaPetit" instance=ExtResource( 9 )]
+position = Vector2( 166, -103 )
+scale = Vector2( 1, 1 )
+
+[node name="TerraGespaPetit3" parent="PrimeraPantalla/TerraGespaPetit" instance=ExtResource( 9 )]
+position = Vector2( -88.0001, -203 )
+scale = Vector2( 1, 1 )
+
+[node name="PortalPantalla" parent="PrimeraPantalla" instance=ExtResource( 3 )]
+position = Vector2( -344.342, -286.326 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="CaigudaMort" parent="PrimeraPantalla" instance=ExtResource( 5 )]
+position = Vector2( -576.723, 246.336 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="Punxa" parent="PrimeraPantalla" instance=ExtResource( 8 )]
+modulate = Color( 0.368627, 0.4, 0.352941, 1 )
+position = Vector2( -25.3814, 118.369 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="TerraPedraPetit" parent="PrimeraPantalla" instance=ExtResource( 15 )]
+position = Vector2( -262.275, -169.556 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="TerraPedraPetit2" parent="PrimeraPantalla/TerraPedraPetit" instance=ExtResource( 15 )]
+position = Vector2( 171, -111 )
+
+[node name="ParetPedra1" parent="PrimeraPantalla" instance=ExtResource( 13 )]
+position = Vector2( -269.043, -209.546 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="ParetPedra2" parent="PrimeraPantalla/ParetPedra1" instance=ExtResource( 14 )]
+position = Vector2( 219, -132 )
+
+[node name="TerraGespaGegant" parent="PrimeraPantalla" instance=ExtResource( 11 )]
+position = Vector2( -259.173, -46.388 )
+scale = Vector2( 0.891077, 0.942983 )
+
+[node name="TerraSec" parent="PrimeraPantalla" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( -187.259, 156.759 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="TerraSec2" parent="PrimeraPantalla/TerraSec" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( 567, 2 )
+
+[node name="TerraSec3" parent="PrimeraPantalla/TerraSec" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( -464, -757 )
+
+[node name="Tile0161" type="Sprite" parent="PrimeraPantalla"]
+position = Vector2( -190.925, 27.193 )
+scale = Vector2( 2.37363, 3.13252 )
+texture = ExtResource( 4 )
+
+[node name="KinematicJugador" parent="PrimeraPantalla" instance=ExtResource( 1 )]
+position = Vector2( -219.126, 102.907 )
+scale = Vector2( 0.282016, 0.533195 )
+
+[node name="Camera2D" type="Camera2D" parent="PrimeraPantalla/KinematicJugador"]
+position = Vector2( -2, 11 )
 current = true
 
-[node name="Terra Petit" parent="." instance=ExtResource( 4 )]
-position = Vector2( 638, 412 )
-
-[node name="Terra Petit2" parent="Terra Petit" instance=ExtResource( 4 )]
-position = Vector2( 97, -111 )
-
-[node name="Terra Petit3" parent="Terra Petit" instance=ExtResource( 4 )]
-position = Vector2( 0, -226 )
-
-[node name="Terra Petit4" parent="Terra Petit" instance=ExtResource( 4 )]
-position = Vector2( 95, -343 )
-
-[node name="Terra Petit5" parent="Terra Petit" instance=ExtResource( 4 )]
-position = Vector2( 156, -468 )
-
-[node name="Paret Gran" parent="." instance=ExtResource( 3 )]
-position = Vector2( 796, 223 )
-
-[node name="Paret Gran 2" parent="Paret Gran" instance=ExtResource( 3 )]
-position = Vector2( -156, -74 )
-
-[node name="Terra Vemell" parent="." instance=ExtResource( 2 )]
-position = Vector2( 95, 489 )
-
-[node name="Terra Vermell 2" parent="Terra Vemell" instance=ExtResource( 2 )]
-position = Vector2( 543, 66 )
-
-[node name="Mort" parent="." instance=ExtResource( 5 )]
-position = Vector2( -581, 664 )
-
-[connection signal="body_entered" from="Mort" to="KinematicJugador" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/SpikeMuerte" to="PrimeraPantalla/KinematicJugador" method="_on_SpikeMuerte_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/SpikeMuerte/SpikeMuerte2" to="PrimeraPantalla/KinematicJugador" method="_on_SpikeMuerte_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/SpikeMuerte/SpikeMuerte3" to="PrimeraPantalla/KinematicJugador" method="_on_SpikeMuerte_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/PortalPantalla" to="PrimeraPantalla/KinematicJugador" method="_on_PortalPantalla_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/CaigudaMort" to="PrimeraPantalla/KinematicJugador" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="PrimeraPantalla/Punxa" to="PrimeraPantalla/KinematicJugador" method="_on_Punxa_body_entered"]
