@@ -48,3 +48,7 @@ func _on_SpikeMuerte_body_entered(body):
 
 func _on_PortalPantalla_body_entered(body):
 	get_tree().change_scene("res://Escenes/Pantalla2.tscn")
+
+
+func _on_MuertePant2_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla2.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Escenes/KinPersonatgeJoc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/TerraStaticBody2D.tscn" type="PackedScene" id=2]
@@ -15,18 +15,19 @@
 [ext_resource path="res://Escenes/PedraParet.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Escenes/PedraParet2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Escenes/PedraTerraPetit.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Escenes/Moneda.tscn" type="PackedScene" id=16]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="PrimeraPantalla" type="Sprite" parent="."]
-position = Vector2( 737, 263 )
-scale = Vector2( 3.5459, 1.87549 )
+position = Vector2( 590.75, 96.6255 )
+scale = Vector2( 3.83154, 2.20044 )
 texture = ExtResource( 6 )
 
 [node name="SpikeMuerte" parent="PrimeraPantalla" instance=ExtResource( 12 )]
 modulate = Color( 0.380392, 0.329412, 0.329412, 1 )
-position = Vector2( -38.9182, -110.905 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( 2.15306, -18.9174 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="SpikeMuerte2" parent="PrimeraPantalla/SpikeMuerte" instance=ExtResource( 12 )]
 modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
@@ -36,79 +37,88 @@ position = Vector2( -216, 0 )
 position = Vector2( -444, 0 )
 
 [node name="DecoracioGespa" type="Sprite" parent="PrimeraPantalla"]
-position = Vector2( -60.6335, 118.369 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -17.9434, 176.498 )
+scale = Vector2( 0.260992, 0.454455 )
 texture = ExtResource( 7 )
 
 [node name="Sun2" type="Sprite" parent="PrimeraPantalla/DecoracioGespa"]
 position = Vector2( 598, -595 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="TerraGespaPetit" parent="PrimeraPantalla" instance=ExtResource( 9 )]
-position = Vector2( 57.5313, 62.917 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( 91.4122, 129.235 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="TerraGespaPetit2" parent="PrimeraPantalla/TerraGespaPetit" instance=ExtResource( 9 )]
 position = Vector2( 166, -103 )
-scale = Vector2( 1, 1 )
 
 [node name="TerraGespaPetit3" parent="PrimeraPantalla/TerraGespaPetit" instance=ExtResource( 9 )]
 position = Vector2( -88.0001, -203 )
-scale = Vector2( 1, 1 )
 
 [node name="PortalPantalla" parent="PrimeraPantalla" instance=ExtResource( 3 )]
-position = Vector2( -344.342, -286.326 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -280.501, -168.433 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="CaigudaMort" parent="PrimeraPantalla" instance=ExtResource( 5 )]
-position = Vector2( -576.723, 246.336 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -495.558, 285.568 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="Punxa" parent="PrimeraPantalla" instance=ExtResource( 8 )]
 modulate = Color( 0.368627, 0.4, 0.352941, 1 )
-position = Vector2( -25.3814, 118.369 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( 14.6807, 176.498 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="TerraPedraPetit" parent="PrimeraPantalla" instance=ExtResource( 15 )]
-position = Vector2( -262.275, -169.556 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -204.552, -68.9071 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="TerraPedraPetit2" parent="PrimeraPantalla/TerraPedraPetit" instance=ExtResource( 15 )]
 position = Vector2( 171, -111 )
 
 [node name="ParetPedra1" parent="PrimeraPantalla" instance=ExtResource( 13 )]
-position = Vector2( -269.043, -209.546 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -210.816, -102.992 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="ParetPedra2" parent="PrimeraPantalla/ParetPedra1" instance=ExtResource( 14 )]
 position = Vector2( 219, -132 )
 
 [node name="TerraGespaGegant" parent="PrimeraPantalla" instance=ExtResource( 11 )]
-position = Vector2( -259.173, -46.388 )
-scale = Vector2( 0.891077, 0.942983 )
+position = Vector2( -201.682, 36.072 )
+scale = Vector2( 0.824647, 0.803728 )
 
 [node name="TerraSec" parent="PrimeraPantalla" instance=ExtResource( 2 )]
 modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -187.259, 156.759 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -159.14, 210.128 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="TerraSec2" parent="PrimeraPantalla/TerraSec" instance=ExtResource( 2 )]
 modulate = Color( 1, 1, 1, 1 )
-position = Vector2( 567, 2 )
+position = Vector2( 658.999, 0 )
 
 [node name="TerraSec3" parent="PrimeraPantalla/TerraSec" instance=ExtResource( 2 )]
 modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -464, -757 )
+position = Vector2( -369, -760 )
 
-[node name="Tile0161" type="Sprite" parent="PrimeraPantalla"]
-position = Vector2( -190.925, 27.193 )
-scale = Vector2( 2.37363, 3.13252 )
+[node name="Moneda" parent="PrimeraPantalla" instance=ExtResource( 16 )]
+position = Vector2( -70.9245, 121.964 )
+scale = Vector2( 0.260992, 0.454455 )
+
+[node name="Moneda2" parent="PrimeraPantalla" instance=ExtResource( 16 )]
+position = Vector2( 139.957, 56.5226 )
+scale = Vector2( 0.260992, 0.454455 )
+
+[node name="Moneda3" parent="PrimeraPantalla" instance=ExtResource( 16 )]
+position = Vector2( -173.755, -130.713 )
+scale = Vector2( 0.260992, 0.454455 )
+
+[node name="1" type="Sprite" parent="PrimeraPantalla"]
+position = Vector2( -157.052, 93.7878 )
+scale = Vector2( 2.19667, 2.66992 )
 texture = ExtResource( 4 )
 
 [node name="KinematicJugador" parent="PrimeraPantalla" instance=ExtResource( 1 )]
-position = Vector2( -219.126, 102.907 )
-scale = Vector2( 0.282016, 0.533195 )
+position = Vector2( -154.703, 162.41 )
+scale = Vector2( 0.260992, 0.454455 )
 
 [node name="Camera2D" type="Camera2D" parent="PrimeraPantalla/KinematicJugador"]
 position = Vector2( -2, 11 )
