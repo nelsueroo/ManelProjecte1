@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenes/KinPersonatgeJoc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/TerraStaticBody2D.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Escenes/PedraParet2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Escenes/PedraTerraPetit.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Escenes/Moneda.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Imatges/Objectes/Environment/ground_stone.png" type="Texture" id=17]
+[ext_resource path="res://Escenes/TerraInv.tscn" type="PackedScene" id=18]
 
 [node name="Node2D" type="Node2D"]
 
@@ -123,6 +125,15 @@ scale = Vector2( 0.260992, 0.454455 )
 [node name="Camera2D" type="Camera2D" parent="PrimeraPantalla/KinematicJugador"]
 position = Vector2( -2, 11 )
 current = true
+
+[node name="TerraInv" parent="PrimeraPantalla" instance=ExtResource( 18 )]
+position = Vector2( 217.732, 83.7898 )
+scale = Vector2( 0.260992, 0.454455 )
+
+[node name="GroundStone" type="Sprite" parent="PrimeraPantalla"]
+position = Vector2( 314.299, 8.80483 )
+scale = Vector2( 0.260992, 0.454455 )
+texture = ExtResource( 17 )
 
 [connection signal="body_entered" from="PrimeraPantalla/SpikeMuerte" to="PrimeraPantalla/KinematicJugador" method="_on_SpikeMuerte_body_entered"]
 [connection signal="body_entered" from="PrimeraPantalla/SpikeMuerte/SpikeMuerte2" to="PrimeraPantalla/KinematicJugador" method="_on_SpikeMuerte_body_entered"]

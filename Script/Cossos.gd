@@ -52,3 +52,31 @@ func _on_PortalPantalla_body_entered(body):
 
 func _on_MuertePant2_body_entered(body):
 	get_tree().change_scene("res://Escenes/Pantalla2.tscn")
+
+
+func _on_PunxaAbaix_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla2.tscn")
+
+
+func _on_PortalNaranja_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla3.tscn")
+
+
+func _on_MuertePant3_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla3.tscn")
+
+
+func _on_SpikeMan_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla3.tscn")
+
+
+func _on_SPike_body_entered(body):
+	get_tree().change_scene("res://Escenes/Pantalla3.tscn")
+
+
+func _on_Portal3_body_entered(body):
+	get_tree().change_scene("res://Escenes/PantallaFinal.tscn")
+
+
+func _on_TPIniciFinal_body_entered(body):
+	get_tree().change_scene("res://Escenes/NodeTerra.tscn")
